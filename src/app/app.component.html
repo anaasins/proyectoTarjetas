@@ -1,0 +1,56 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" placeholder="John">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" value="Doe">
+  <textarea placeholder='Some text...'></textarea>
+  <label for="country">Color</label>
+    <select id="country" name="country">
+    <option value="au">Australia</option>
+    <option value="ca">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+</form>
+<hr>
+
+<div class="cards">
+<!-- Front side of card -->
+<div class="card">
+  <div class="front">
+    <div class="side"></div>
+    <div class="center">
+      <div class="logo">
+        <div class="logo-icon">
+          <i class="fa fa-cubes fa-2x"></i>
+        </div>
+        <h1 class="title">{{nombre}}</h1>
+        <h3 class="subtitle">{{profesion}}</h3>
+      </div>
+    </div>
+    <div class="side"></div>
+  </div>
+</div>
+<!-- Back side of card -->
+<div class="card">
+  <div class="back">
+    <div class="left-box">
+      <div class="logo2">
+        <img src="./assets/imagen.jpg" alt="">
+
+      </div>
+    </div>
+    <div class="right-box">
+      <h1 class="title">{{nombre}}</h1>
+      <h3 class="subtitle">{{profesion}}</h3>
+      <hr>
+      <ul>
+        <li><i class="fa fa-mobile"></i>{{telefono}}</li>
+        <li><i class="fa fa-envelope"></i>{{correo}}</li>
+        <li><i class="fa fa-globe"></i>{{git}}</li>
+        <li><i class="fa fa-map-marker"></i>{{direccion}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
