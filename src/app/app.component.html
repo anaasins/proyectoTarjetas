@@ -1,15 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname" placeholder="John">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname" placeholder="Doe">
-  <textarea placeholder='Some text...'></textarea>
-  <label for="country">Color</label>
-    <select id="country" name="country">
-    <option value="au">Australia</option>
-    <option value="ca">Canada</option>
-    <option value="usa">USA</option>
+  <label for="nombre">Nombre</label>
+  <input type="text" id="nombre" name="nombre" placeholder="Antonio Lopez" (keyup)="actualizar($event);">
+  <label for="profesion">Profesion</label>
+  <input type="text" id="profesion" name="profesion" placeholder="Web developer" (keyup)="actualizar($event);">
+  <label for="telefono">Telefono</label>
+  <input type="text" id="telefono" name="telefono" placeholder="666987123" (keyup)="actualizar($event);">
+  <label for="correo">Correo electronico</label>
+  <input type="text" id="correo" name="correo" placeholder="pedro@gmail.com" (keyup)="actualizar($event);">
+  <label for="direccion">Dirección</label>
+  <input type="text" id="direccion" name="direccion" placeholder="C/Mayor, 59" (keyup)="actualizar($event);">
+  <label for="color">Color</label>
+    <select id="color" name="color">
+    <option value="blue">Azul</option>
+    <option value="red">Rojo</option>
+    <option value="green">Verde</option>
+    <option value="pink">Rosa</option>
   </select>
 </form>
 <hr>
@@ -47,7 +53,6 @@
       <ul>
         <li><i class="fa fa-mobile"></i>{{telefono}}</li>
         <li><i class="fa fa-envelope"></i>{{correo}}</li>
-        <li><i class="fa fa-globe"></i>{{git}}</li>
         <li><i class="fa fa-map-marker"></i>{{direccion}}</li>
       </ul>
     </div>
