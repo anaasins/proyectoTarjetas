@@ -1,24 +1,24 @@
+
+<p Titulo>Tarjeta de usuario</p>
 <!--The content below is only a placeholder and can be replaced.-->
-<form>
-  <label for="nombre">Nombre</label>
-  <input type="text" id="nombre" name="nombre" placeholder="Antonio Lopez" (keyup)="actualizar($event);">
-  <label for="profesion">Profesion</label>
-  <input type="text" id="profesion" name="profesion" placeholder="Web developer" (keyup)="actualizar($event);">
-  <label for="telefono">Telefono</label>
-  <input type="text" id="telefono" name="telefono" placeholder="666987123" (keyup)="actualizar($event);">
-  <label for="correo">Correo electronico</label>
-  <input type="text" id="correo" name="correo" placeholder="pedro@gmail.com" (keyup)="actualizar($event);">
-  <label for="direccion">Dirección</label>
-  <input type="text" id="direccion" name="direccion" placeholder="C/Mayor, 59" (keyup)="actualizar($event);">
-  <label for="color">Color</label>
-    <select id="color" name="color">
-    <option value="blue">Azul</option>
-    <option value="red">Rojo</option>
-    <option value="green">Verde</option>
-    <option value="pink">Rosa</option>
+<form  [ngClass]="{uno:varVisible==0, dos:varVisible==1}">
+  <label for="nombre" Label>Nombre</label>
+  <input type="text" id="nombre" name="nombre" placeholder="Nombre" (keyup)="actualizar($event);">
+  <label for="profesion" Label>Profesion</label>
+  <input type="text" id="profesion" name="profesion" placeholder="Profesion" (keyup)="actualizar($event);">
+  <label for="telefono" Label>Telefono</label>
+  <input type="text" id="telefono" name="telefono" placeholder="Telefono" (keyup)="actualizar($event);">
+  <label for="correo" Label>Correo electronico</label>
+  <input type="text" id="correo" name="correo" placeholder="Correo" (keyup)="actualizar($event);">
+  <label for="direccion" Label>Dirección</label>
+  <input type="text" id="direccion" name="direccion" placeholder="Direccion" (keyup)="actualizar($event);">
+  <label for="nacimiento" Label>Año de nacimiento</label>
+    <select id="nacimiento" name="nacimiento" (click)="actualizar($event);">
+    <option id="nacimiento" *ngFor="let fecha of nacimiento" value="{{fecha}}">{{fecha}}</option>
   </select>
 </form>
-<hr>
+<button type="button" name="button" id="boton" (click) = "visibilidad();" MiEvento>OCULTAR FORMULARIO</button>
+<hr  [ngClass]="{uno:varVisible==0, dos:varVisible==1}">
 
 <div class="cards">
 <!-- Front side of card -->
@@ -51,6 +51,7 @@
       <h3 class="subtitle">{{profesion}}</h3>
       <hr>
       <ul>
+        <li><i class="fa fa-birthday-cake"></i>{{fechaFinal}}</li>
         <li><i class="fa fa-mobile"></i>{{telefono}}</li>
         <li><i class="fa fa-envelope"></i>{{correo}}</li>
         <li><i class="fa fa-map-marker"></i>{{direccion}}</li>
